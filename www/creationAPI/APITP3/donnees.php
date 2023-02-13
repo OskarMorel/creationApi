@@ -53,9 +53,55 @@
 			$infos['message']=$e->getMessage();
 			sendJSON($infos, 500) ;
 		}
-
-
     }
+
+	function CB_modifPrixStock($donneesJson, $codeBarre) {
+		if(!empty($donneesJson['CODE_BARRE']) 
+			&& !empty($donneesJson['PRIX'])
+			&& !empty($donneesJson['STOCK'])
+			
+		  ){
+			  // Données remplies, on modifie le client
+			try {
+				$pdo=getPDO();
+				$maRequete='UPDATE stockprix SET PRIX=:PRIX, STOCK=:STOCK WHERE CODE_BARRE = :CODE_BARRE';
+				$stmt = $pdo->prepare($maRequete);						// Préparation de la requête
+				$stmt->bindParam("CODE_BARRE", $codeBarre);
+				$stmt->bindParam("PRIX", $donneesJson['PRIX']);				
+				$stmt->bindParam("STOCK", $donneesJson['STOCK']);
+				$stmt->execute();	
+				$nb = $stmt->rowCount(); // nbre d'items modifiés
+				
+				$stmt=null;
+				$pdo=null;
+				
+				// Retour des informations au client (statut)
+				if ($nb==0) {
+					// Erreur lors du update
+					$infos['Statut']="KO";
+					$infos['Message']="Erreur dans la mise à jour";
+					sendJSON($infos, 404) ;
+				} else {
+					// Modification réalisée
+					$infos['Statut']="OK";
+					$infos['Message']="Modification effectuée";
+					sendJSON($infos, 201) ;
+				}
+
+				sendJSON($infos, 201) ;
+			} catch(PDOException $e){
+				// Retour des informations au client 
+				$infos['Statut']="KO";
+				$infos['message']=$e->getMessage();
+				sendJSON($infos, 500) ;
+			}
+		}else {
+			// Données manquantes, Retour des informations au client 
+			$infos['Statut']="KO";
+			$infos['message']="Données incomplètes";
+			sendJSON($infos, 400) ;
+		}
+	}
 
 
 

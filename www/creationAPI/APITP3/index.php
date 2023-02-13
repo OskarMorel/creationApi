@@ -31,5 +31,28 @@
 				sendJSON($infos, 404) ;
 			}
 			break ;
+		case "PUT" :
+			if (!empty($_GET['demande'])) {
+				// Modification d'un client / type de client
+				// Récupération des données envoyées
+				$url = explode("/", filter_var($_GET['demande'],FILTER_SANITIZE_URL));
+				switch($url[0]) {
+					case 'CB_modifPrixStock' : 
+						// Modification d'un client
+						if (!empty($url[1])) {  // Attention si valeur 0 = false ->  vrai
+							authentification(); // Test si on est bien authenfifié pour l'API
+							$donnees = json_decode(file_get_contents("php://input"),true);
+							modificationClient($donnees,$url[1] );
+						} else {
+							$infos['Statut']="KO";
+							$infos['message']="Vous n'avez pas renseigné le No de client.";
+							sendJSON($infos, 400) ;
+						}		
+						break ;
+			} else {
+				$infos['Statut']="KO";
+				$infos['message']="URL non valide";
+				sendJSON($infos, 404) ;
+			}
 	}
 ?>

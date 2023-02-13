@@ -10,3 +10,54 @@
 [Mon Feb 13 17:18:39.113689 2023] [mpm_winnt:notice] [pid 10656:tid 612] AH00418: Parent: Created child process 3784
 [Mon Feb 13 17:18:39.756687 2023] [ssl:warn] [pid 3784:tid 424] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
 [Mon Feb 13 17:18:39.756687 2023] [ssl:warn] [pid 3784:tid 424] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Feb 13 17:18:39.832719 2023] [ssl:warn] [pid 3784:tid 424] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Mon Feb 13 17:18:39.832719 2023] [ssl:warn] [pid 3784:tid 424] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Feb 13 17:18:39.832719 2023] [ssl:warn] [pid 3784:tid 424] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Feb 13 17:18:39.849688 2023] [mpm_winnt:notice] [pid 3784:tid 424] AH00354: Child: Starting 64 worker threads.
+[Mon Feb 13 17:29:59.131693 2023] [:error] [pid 3784:tid 1312] [client ::1:59736] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php on line 43, referer: http://localhost/creationAPI/
+[Mon Feb 13 17:29:59.131693 2023] [:error] [pid 3784:tid 1312] [client ::1:59736] PHP Stack trace:, referer: http://localhost/creationAPI/
+[Mon Feb 13 17:29:59.131693 2023] [:error] [pid 3784:tid 1312] [client ::1:59736] PHP   1. {main}() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:0, referer: http://localhost/creationAPI/
+[Mon Feb 13 17:29:59.131693 2023] [:error] [pid 3784:tid 1312] [client ::1:59736] PHP   2. appelAPI() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:77, referer: http://localhost/creationAPI/
+[Mon Feb 13 17:32:31.421412 2023] [:error] [pid 3784:tid 1304] [client ::1:50728] PHP Fatal error:  Only variables can be passed by reference in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php on line 77, referer: http://localhost/creationAPI/
+[Mon Feb 13 17:32:31.435413 2023] [:error] [pid 3784:tid 1312] [client ::1:50639] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php on line 45
+[Mon Feb 13 17:32:31.435413 2023] [:error] [pid 3784:tid 1312] [client ::1:50639] PHP Stack trace:
+[Mon Feb 13 17:32:31.435413 2023] [:error] [pid 3784:tid 1312] [client ::1:50639] PHP   1. {main}() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:0
+[Mon Feb 13 17:32:31.435413 2023] [:error] [pid 3784:tid 1312] [client ::1:50639] PHP   2. appelAPI() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:77
+[Mon Feb 13 17:33:07.984133 2023] [:error] [pid 3784:tid 1304] [client ::1:50729] PHP Parse error:  syntax error, unexpected '$articlesStockPrix' (T_VARIABLE) in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php on line 79
+[Mon Feb 13 17:37:28.115365 2023] [:error] [pid 3784:tid 1304] [client ::1:50870] PHP Warning:  Invalid argument supplied for foreach() in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php on line 94
+[Mon Feb 13 17:37:28.115365 2023] [:error] [pid 3784:tid 1304] [client ::1:50870] PHP Stack trace:
+[Mon Feb 13 17:37:28.115365 2023] [:error] [pid 3784:tid 1304] [client ::1:50870] PHP   1. {main}() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:0
+[Mon Feb 13 17:38:00.262159 2023] [:error] [pid 3784:tid 1304] [client ::1:50879] PHP Warning:  Invalid argument supplied for foreach() in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php on line 95
+[Mon Feb 13 17:38:00.262159 2023] [:error] [pid 3784:tid 1304] [client ::1:50879] PHP Stack trace:
+[Mon Feb 13 17:38:00.262159 2023] [:error] [pid 3784:tid 1304] [client ::1:50879] PHP   1. {main}() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:0
+[Mon Feb 13 17:38:23.706432 2023] [:error] [pid 3784:tid 1304] [client ::1:50909] PHP Warning:  curl_exec(): supplied resource is not a valid cURL handle resource in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php on line 86
+[Mon Feb 13 17:38:23.707430 2023] [:error] [pid 3784:tid 1304] [client ::1:50909] PHP Stack trace:
+[Mon Feb 13 17:38:23.707430 2023] [:error] [pid 3784:tid 1304] [client ::1:50909] PHP   1. {main}() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:0
+[Mon Feb 13 17:38:23.707430 2023] [:error] [pid 3784:tid 1304] [client ::1:50909] PHP   2. curl_exec() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:86
+[Mon Feb 13 17:38:23.707430 2023] [:error] [pid 3784:tid 1304] [client ::1:50909] PHP Warning:  Invalid argument supplied for foreach() in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php on line 95
+[Mon Feb 13 17:38:23.707430 2023] [:error] [pid 3784:tid 1304] [client ::1:50909] PHP Stack trace:
+[Mon Feb 13 17:38:23.707430 2023] [:error] [pid 3784:tid 1304] [client ::1:50909] PHP   1. {main}() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:0
+[Mon Feb 13 17:39:42.106770 2023] [:error] [pid 3784:tid 1304] [client ::1:50978] PHP Warning:  Invalid argument supplied for foreach() in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php on line 95
+[Mon Feb 13 17:39:42.106770 2023] [:error] [pid 3784:tid 1304] [client ::1:50978] PHP Stack trace:
+[Mon Feb 13 17:39:42.106770 2023] [:error] [pid 3784:tid 1304] [client ::1:50978] PHP   1. {main}() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:0
+[Mon Feb 13 17:39:53.691974 2023] [:error] [pid 3784:tid 1304] [client ::1:50979] PHP Warning:  Invalid argument supplied for foreach() in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php on line 96
+[Mon Feb 13 17:39:53.691974 2023] [:error] [pid 3784:tid 1304] [client ::1:50979] PHP Stack trace:
+[Mon Feb 13 17:39:53.691974 2023] [:error] [pid 3784:tid 1304] [client ::1:50979] PHP   1. {main}() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:0
+[Mon Feb 13 17:40:11.106622 2023] [:error] [pid 3784:tid 1304] [client ::1:50986] PHP Warning:  Invalid argument supplied for foreach() in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php on line 96
+[Mon Feb 13 17:40:11.106622 2023] [:error] [pid 3784:tid 1304] [client ::1:50986] PHP Stack trace:
+[Mon Feb 13 17:40:11.106622 2023] [:error] [pid 3784:tid 1304] [client ::1:50986] PHP   1. {main}() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:0
+[Mon Feb 13 17:40:26.911247 2023] [:error] [pid 3784:tid 1304] [client ::1:50992] PHP Notice:  Undefined variable: result in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php on line 87
+[Mon Feb 13 17:40:26.911247 2023] [:error] [pid 3784:tid 1304] [client ::1:50992] PHP Stack trace:
+[Mon Feb 13 17:40:26.911247 2023] [:error] [pid 3784:tid 1304] [client ::1:50992] PHP   1. {main}() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:0
+[Mon Feb 13 17:40:26.911247 2023] [:error] [pid 3784:tid 1304] [client ::1:50992] PHP Warning:  Invalid argument supplied for foreach() in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php on line 87
+[Mon Feb 13 17:40:26.911247 2023] [:error] [pid 3784:tid 1304] [client ::1:50992] PHP Stack trace:
+[Mon Feb 13 17:40:26.911247 2023] [:error] [pid 3784:tid 1304] [client ::1:50992] PHP   1. {main}() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:0
+[Mon Feb 13 17:47:26.576134 2023] [:error] [pid 3784:tid 1312] [client ::1:55577] PHP Fatal error:  Uncaught Error: Call to a member function asort() on array in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:82\nStack trace:\n#0 {main}\n  thrown in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php on line 82
+[Mon Feb 13 17:54:00.963677 2023] [:error] [pid 3784:tid 1308] [client ::1:55973] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php on line 45
+[Mon Feb 13 17:54:00.964680 2023] [:error] [pid 3784:tid 1308] [client ::1:55973] PHP Stack trace:
+[Mon Feb 13 17:54:00.964680 2023] [:error] [pid 3784:tid 1308] [client ::1:55973] PHP   1. {main}() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:0
+[Mon Feb 13 17:54:00.964680 2023] [:error] [pid 3784:tid 1308] [client ::1:55973] PHP   2. appelAPI() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:81
+[Mon Feb 13 18:12:58.506888 2023] [:error] [pid 3784:tid 1300] [client ::1:60824] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php on line 45
+[Mon Feb 13 18:12:58.506888 2023] [:error] [pid 3784:tid 1300] [client ::1:60824] PHP Stack trace:
+[Mon Feb 13 18:12:58.506888 2023] [:error] [pid 3784:tid 1300] [client ::1:60824] PHP   1. {main}() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:0
+[Mon Feb 13 18:12:58.506888 2023] [:error] [pid 3784:tid 1300] [client ::1:60824] PHP   2. appelAPI() D:\\UWAMP_Demo_API_Clients_Mezabi\\www\\creationAPI\\testAPI\\index.php:81

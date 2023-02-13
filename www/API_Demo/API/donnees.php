@@ -323,34 +323,20 @@
 		}
 	}
 	
-	function modificationClient($donneesJson, $idClient) {
-		if(!empty($donneesJson['CODE_CLIENT']) 
-			&& !empty($donneesJson['NOM_MAGASIN'])
-			&& !empty($donneesJson['RESPONSABLE'])
-			&& !empty($donneesJson['ADRESSE_1'])
-			&& !empty($donneesJson['ADRESSE_2'])
-			&& !empty($donneesJson['CODE_POSTAL'])
-			&& !empty($donneesJson['VILLE'])
-			&& !empty($donneesJson['TELEPHONE'])
-			&& !empty($donneesJson['EMAIL'])
-			&& !empty($donneesJson['TYPE_CLIENT'])
+	function CB_modifPrixStock($donneesJson, $codeBarre) {
+		if(!empty($donneesJson['CODE_BARRE']) 
+			&& !empty($donneesJson['PRIX'])
+			&& !empty($donneesJson['STOCK'])
+			
 		  ){
 			  // Données remplies, on modifie le client
 			try {
 				$pdo=getPDO();
-				$maRequete='UPDATE clients SET CODE_CLIENT=:CODE_CLIENT,NOM_MAGASIN=:NOM_MAGASIN,ADRESSE_1=:ADRESSE_1,ADRESSE_2=:ADRESSE_2,CODE_POSTAL=:CODE_POSTAL,VILLE=:VILLE,RESPONSABLE=:RESPONSABLE,TELEPHONE=:TELEPHONE,EMAIL=:EMAIL,TYPE_CLIENT=:TYPE_CLIENT WHERE ID_CLIENT=:ID_CLIENT';
+				$maRequete='UPDATE stockprix SET PRIX=:PRIX, STOCK=:STOCK WHERE CODE_BARRE = :CODE_BARRE';
 				$stmt = $pdo->prepare($maRequete);						// Préparation de la requête
-				$stmt->bindParam("ID_CLIENT", $idClient);
+				$stmt->bindParam("CODE_BARRE", $codeBarre);
 				$stmt->bindParam("CODE_CLIENT", $donneesJson['CODE_CLIENT']);				
 				$stmt->bindParam("NOM_MAGASIN", $donneesJson['NOM_MAGASIN']);
-				$stmt->bindParam("ADRESSE_1", $donneesJson['ADRESSE_1']);
-				$stmt->bindParam("ADRESSE_2", $donneesJson['ADRESSE_2']);
-				$stmt->bindParam("CODE_POSTAL", $donneesJson['CODE_POSTAL']);
-				$stmt->bindParam("VILLE", $donneesJson['VILLE']);
-				$stmt->bindParam("RESPONSABLE", $donneesJson['RESPONSABLE']);
-				$stmt->bindParam("TELEPHONE", $donneesJson['TELEPHONE']);
-				$stmt->bindParam("EMAIL", $donneesJson['EMAIL']);
-				$stmt->bindParam("TYPE_CLIENT", $donneesJson['TYPE_CLIENT']);
 				$stmt->execute();	
 				$nb = $stmt->rowCount(); // nbre d'items modifiés
 				
