@@ -1,0 +1,12 @@
+[Mon Feb 13 17:18:38.996688 2023] [ssl:warn] [pid 10656:tid 612] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Feb 13 17:18:38.996688 2023] [ssl:warn] [pid 10656:tid 612] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Feb 13 17:18:39.013689 2023] [core:warn] [pid 10656:tid 612] AH00098: pid file D:/UWAMP_Demo_API_Clients_Mezabi/bin/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Feb 13 17:18:39.080687 2023] [ssl:warn] [pid 10656:tid 612] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Mon Feb 13 17:18:39.081687 2023] [ssl:warn] [pid 10656:tid 612] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Feb 13 17:18:39.081687 2023] [ssl:warn] [pid 10656:tid 612] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Feb 13 17:18:39.112688 2023] [mpm_winnt:notice] [pid 10656:tid 612] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/7.0.3 configured -- resuming normal operations
+[Mon Feb 13 17:18:39.112688 2023] [mpm_winnt:notice] [pid 10656:tid 612] AH00456: Server built: Jan 28 2016 09:58:25
+[Mon Feb 13 17:18:39.112688 2023] [core:notice] [pid 10656:tid 612] AH00094: Command line: 'D:\\UWAMP_Demo_API_Clients_Mezabi\\bin\\apache\\bin\\httpd.exe -d D:/UWAMP_Demo_API_Clients_Mezabi/bin/apache -f D:\\UWAMP_Demo_API_Clients_Mezabi\\bin\\apache\\conf\\httpd.conf'
+[Mon Feb 13 17:18:39.113689 2023] [mpm_winnt:notice] [pid 10656:tid 612] AH00418: Parent: Created child process 3784
+[Mon Feb 13 17:18:39.756687 2023] [ssl:warn] [pid 3784:tid 424] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Feb 13 17:18:39.756687 2023] [ssl:warn] [pid 3784:tid 424] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
